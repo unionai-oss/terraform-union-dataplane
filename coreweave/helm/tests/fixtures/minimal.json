@@ -1,0 +1,12 @@
+{
+  "access_key_id": "example-key-id",
+  "bucket_name": "union-dataplane-a1b2c3",
+  "cluster_endpoint": "https://api.example.com",
+  "cluster_id": "example-cluster-id",
+  "cluster_name": "union-dataplane",
+  "fast_registration_bucket_name": "union-dataplane-a1b2c3",
+  "helm_values": "\"clusterName\": \"union-dataplane\"\n\"fluentbit\":\n  \"enabled\": true\n  \"env\":\n  - \"name\": \"AWS_ACCESS_KEY_ID\"\n    \"valueFrom\":\n      \"secretKeyRef\":\n        \"key\": \"access_key_id\"\n        \"name\": \"storage-credentials\"\n  - \"name\": \"AWS_SECRET_ACCESS_KEY\"\n    \"valueFrom\":\n      \"secretKeyRef\":\n        \"key\": \"secret_key\"\n        \"name\": \"storage-credentials\"\n\"provider\": \"custom\"\n\"storage\":\n  \"authType\": \"accesskey\"\n  \"bucketName\": \"union-dataplane-a1b2c3\"\n  \"credentialsSecretRef\":\n    \"name\": \"storage-credentials\"\n  \"custom\":\n    \"container\": \"union-dataplane-a1b2c3\"\n    \"stow\":\n      \"config\":\n        \"auth_type\": \"accesskey\"\n        \"disable_force_path_style\": true\n        \"disable_ssl\": false\n        \"endpoint\": \"https://cwobject.com\"\n        \"region\": \"US-EAST-04A\"\n      \"kind\": \"s3\"\n    \"type\": \"stow\"\n  \"fastRegistrationBucketName\": \"union-dataplane-a1b2c3\"\n  \"provider\": \"custom\"\n",
+  "object_storage_endpoint": "https://cwobject.com",
+  "region": "US-EAST-04A",
+  "secret_key": "example-secret-key"
+}

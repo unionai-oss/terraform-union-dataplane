@@ -1,0 +1,29 @@
+{
+  "backend_client_id": "example-backend-client-id",
+  "bucket_name": "union-gpu-metadata",
+  "cluster_ca_certificate": "ZXhhbXBsZS1jYQ==",
+  "cluster_endpoint": "https://aks.example.com",
+  "cluster_name": "union-gpu",
+  "container_registry_login_server": "registry.example.com",
+  "gpu_node_pool": {
+    "enabled": true,
+    "max_nodes": 4,
+    "os_disk_size_gb": 200,
+    "vm_size": "Standard_NC4as_T4_v3"
+  },
+  "gpu_node_selector": {
+    "node-pool": "gpu"
+  },
+  "helm_values": "\"config\":\n  \"proxy\":\n    \"persistedLogs\":\n      \"azureLogAnalytics\":\n        \"logAnalyticsWorkspaceResourceIdTemplate\": \"/subscriptions/sub/resourceGroups/union-gpu-rg/providers/Microsoft.OperationalInsights/workspaces/union-gpu\"\n      \"sourceType\": \"AzureLogAnalytics\"\n\"fluentbit\":\n  \"enabled\": false\n\"global\":\n  \"AZURE_BACKEND_CLIENT_ID\": \"example-backend-client-id\"\n  \"AZURE_KEY_VAULT_URI\": \"https://vault.example.com/\"\n  \"AZURE_RESOURCE_GROUP\": \"union-gpu-rg\"\n  \"AZURE_STORAGE_ACCOUNT\": \"uniongpuabcd1234\"\n  \"AZURE_SUBSCRIPTION_ID\": \"example-subscription-id\"\n  \"AZURE_TENANT_ID\": \"example-tenant-id\"\n  \"AZURE_WORKER_CLIENT_ID\": \"example-worker-client-id\"\n  \"CLUSTER_NAME\": \"union-gpu\"\n  \"METADATA_CONTAINER\": \"union-gpu-metadata\"\n",
+  "key_vault_uri": "https://vault.example.com/",
+  "kubeconfig_command": "az aks get-credentials --resource-group union-gpu-rg --name union-gpu && kubelogin convert-kubeconfig -l azurecli",
+  "kubelogin_server_id": "example-server-app",
+  "log_analytics_workspace_id": "/subscriptions/sub/resourceGroups/union-gpu-rg/providers/Microsoft.OperationalInsights/workspaces/union-gpu",
+  "namespace": "union",
+  "nat_gateway_public_ip": "192.0.2.10",
+  "oidc_issuer_url": "https://oidc.example.com/union-gpu/",
+  "region": "test-region",
+  "resource_group_name": "union-gpu-rg",
+  "storage_account_name": "uniongpuabcd1234",
+  "worker_client_id": "example-worker-client-id"
+}

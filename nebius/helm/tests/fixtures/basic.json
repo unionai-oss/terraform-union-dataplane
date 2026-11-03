@@ -1,0 +1,17 @@
+{
+  "access_key_id": "example-access-key-id",
+  "bucket_name": "union-dataplane-metadata-abcd1234",
+  "cluster_ca_certificate": "-----BEGIN CERTIFICATE-----\nexample\n-----END CERTIFICATE-----\n",
+  "cluster_endpoint": "https://203.0.113.20:443",
+  "cluster_id": "mk8scluster-e00example",
+  "cluster_name": "union-dataplane",
+  "fast_registration_bucket": "union-dataplane-fast-registration-abcd1234",
+  "helm_values": "\"clusterName\": \"union-dataplane\"\n\"config\":\n  \"k8s\":\n    \"plugins\":\n      \"k8s\":\n        \"resource-tolerations\":\n          \"nvidia.com/gpu\":\n          - \"effect\": \"NoSchedule\"\n            \"key\": \"nvidia.com/gpu\"\n            \"operator\": \"Equal\"\n            \"value\": \"true\"\n\"provider\": \"custom\"\n\"storage\":\n  \"bucketName\": \"union-dataplane-metadata-abcd1234\"\n  \"credentialsSecretRef\":\n    \"name\": \"storage-credentials\"\n  \"endpoint\": \"https://storage.eu-north1.nebius.cloud\"\n  \"fastRegistrationBucketName\": \"union-dataplane-fast-registration-abcd1234\"\n  \"provider\": \"compat\"\n  \"region\": \"eu-north1\"\n",
+  "kubeconfig_command": "nebius mk8s cluster get-credentials --id mk8scluster-e00example --external",
+  "region": "eu-north1",
+  "registry_id": "registry-e00example",
+  "registry_url": "cr.eu-north1.nebius.cloud/e00example",
+  "secret_access_key": "example-secret-key",
+  "service_account_id": "serviceaccount-e00example",
+  "storage_endpoint": "https://storage.eu-north1.nebius.cloud"
+}
