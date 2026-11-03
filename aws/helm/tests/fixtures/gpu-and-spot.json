@@ -1,0 +1,28 @@
+{
+  "account_id": "example-account-id",
+  "bucket_name": "test-dp-abcd1234-metadata",
+  "cluster_ca_certificate": "Y2E=",
+  "cluster_endpoint": "https://eks.example.com",
+  "cluster_name": "test-dp",
+  "ecr_repository_name": "test-dp",
+  "ecr_repository_url": "example-account-id.dkr.ecr.us-east-2.amazonaws.com/test-dp",
+  "fast_registration_bucket": "test-dp-abcd1234-fast-reg",
+  "gpu_node_pool": {
+    "capacity_type": "ON_DEMAND",
+    "desired_size": 1,
+    "enabled": true,
+    "instance_types": [
+      "g5.2xlarge"
+    ],
+    "max_size": 4,
+    "min_size": 0
+  },
+  "gpu_node_selector": {
+    "node-pool": "gpu"
+  },
+  "helm_values": "\"global\":\n  \"AWS_ACCOUNT_ID\": \"example-account-id\"\n  \"AWS_REGION\": \"us-east-2\"\n  \"BACKEND_IAM_ROLE_ARN\": \"arn:aws:iam::example-account-id:role/test-dp-union-system\"\n  \"CLUSTER_NAME\": \"test-dp\"\n  \"FAST_REGISTRATION_BUCKET\": \"test-dp-abcd1234-fast-reg\"\n  \"METADATA_BUCKET\": \"test-dp-abcd1234-metadata\"\n  \"WORKER_IAM_ROLE_ARN\": \"arn:aws:iam::example-account-id:role/test-dp-union-system\"\n\"imageBuilder\":\n  \"registryName\": \"test-dp\"\n",
+  "iam_role_arn": "arn:aws:iam::example-account-id:role/test-dp-union-system",
+  "kubeconfig_command": "aws eks update-kubeconfig --name test-dp --region us-east-2",
+  "oidc_provider_arn": "arn:aws:iam::example-account-id:oidc-provider/oidc.eks.us-east-2.amazonaws.com/id/EXAMPLE",
+  "region": "us-east-2"
+}

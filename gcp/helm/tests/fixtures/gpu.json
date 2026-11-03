@@ -1,0 +1,16 @@
+{
+  "artifact_registry_path": "example-region1-docker.pkg.dev/example-project/union-gpu",
+  "artifact_registry_repository": "union-gpu",
+  "bucket_name": "union-gpu-metadata-abcd1234",
+  "cluster_ca_certificate": "ZXhhbXBsZS1jYQ==",
+  "cluster_endpoint": "192.0.2.1",
+  "cluster_name": "union-gpu",
+  "fast_registration_bucket": "union-gpu-fast-reg-abcd1234",
+  "helm_values": "\"global\":\n  \"BACKEND_IAM_ROLE_ARN\": \"union-gpu-system@example-project.iam.gserviceaccount.com\"\n  \"CLUSTER_NAME\": \"union-gpu\"\n  \"FAST_REGISTRATION_BUCKET\": \"union-gpu-fast-reg-abcd1234\"\n  \"GCP_REGION\": \"example-region1\"\n  \"GOOGLE_PROJECT_ID\": \"example-project\"\n  \"METADATA_BUCKET\": \"union-gpu-metadata-abcd1234\"\n  \"WORKER_IAM_ROLE_ARN\": \"union-gpu-system@example-project.iam.gserviceaccount.com\"\n\"imageBuilder\":\n  \"registryName\": \"union-gpu\"\n",
+  "kubeconfig_command": "gcloud container clusters get-credentials union-gpu --region example-region1 --project example-project",
+  "namespace": "union",
+  "node_service_account_email": "union-gpu-nodes@example-project.iam.gserviceaccount.com",
+  "project_id": "example-project",
+  "region": "example-region1",
+  "service_account_email": "union-gpu-system@example-project.iam.gserviceaccount.com"
+}

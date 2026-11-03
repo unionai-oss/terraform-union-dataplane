@@ -1,0 +1,14 @@
+# System node pool for the Union dataplane on CKS.
+# Schema: https://docs.coreweave.com/products/cks/reference/node-pool
+# Instance type cd-gp-i64-erapids: 64 vCPU / 512 GB, non-burstable
+# (https://docs.coreweave.com/platform/instances/cpu-instances). The docs ask for
+# 3 system nodes of at least ~4 vCPU / 16 GB; the data plane requests 14 vCPU / 27.1 GiB in total.
+apiVersion: compute.coreweave.com/v1alpha1
+kind: NodePool
+metadata:
+  name: union-system
+spec:
+  computeClass: default
+  instanceType: cd-gp-i64-erapids
+  targetNodes: 3
+  autoscaling: false

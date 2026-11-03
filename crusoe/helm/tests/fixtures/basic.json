@@ -1,0 +1,13 @@
+{
+  "bucket_name": "union-dataplane-abcd1234",
+  "cluster_endpoint": "api.example.com",
+  "cluster_id": "example-cluster-id",
+  "cluster_name": "union-dataplane",
+  "helm_values": "\"clusterName\": \"union-dataplane\"\n\"config\":\n  \"k8s\":\n    \"plugins\":\n      \"k8s\":\n        \"default-env-vars\":\n        - \"AWS_DEFAULT_REGION\": \"us-east1\"\n        \"resource-tolerations\":\n          \"nvidia.com/gpu\":\n          - \"effect\": \"NoSchedule\"\n            \"key\": \"nvidia.com/gpu\"\n            \"operator\": \"Equal\"\n            \"value\": \"true\"\n\"fluentbit\":\n  \"enabled\": true\n  \"env\":\n  - \"name\": \"AWS_ACCESS_KEY_ID\"\n    \"valueFrom\":\n      \"secretKeyRef\":\n        \"key\": \"access_key_id\"\n        \"name\": \"storage-credentials\"\n  - \"name\": \"AWS_SECRET_ACCESS_KEY\"\n    \"valueFrom\":\n      \"secretKeyRef\":\n        \"key\": \"secret_key\"\n        \"name\": \"storage-credentials\"\n\"operator\":\n  \"enableTunnelService\": true\n\"provider\": \"custom\"\n\"storage\":\n  \"authType\": \"accesskey\"\n  \"bucketName\": \"union-dataplane-abcd1234\"\n  \"credentialsSecretRef\":\n    \"name\": \"storage-credentials\"\n  \"disableSSL\": false\n  \"endpoint\": \"https://storage.example.com\"\n  \"fastRegistrationBucketName\": \"union-dataplane-abcd1234\"\n  \"provider\": \"compat\"\n  \"region\": \"us-east1\"\n",
+  "kubeconfig_command": "crusoe kubernetes clusters get-credentials union-dataplane",
+  "location": "us-east1-a",
+  "region": "us-east1",
+  "storage_access_key_id": "example-access-key-id",
+  "storage_endpoint": "https://storage.example.com",
+  "storage_secret_access_key": "example-secret-access-key"
+}

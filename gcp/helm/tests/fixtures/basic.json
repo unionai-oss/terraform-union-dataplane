@@ -1,0 +1,16 @@
+{
+  "artifact_registry_path": "example-region1-docker.pkg.dev/example-project/union-dataplane",
+  "artifact_registry_repository": "union-dataplane",
+  "bucket_name": "union-dataplane-metadata-abcd1234",
+  "cluster_ca_certificate": "ZXhhbXBsZS1jYQ==",
+  "cluster_endpoint": "192.0.2.1",
+  "cluster_name": "union-dataplane",
+  "fast_registration_bucket": "union-dataplane-fast-reg-abcd1234",
+  "helm_values": "\"global\":\n  \"BACKEND_IAM_ROLE_ARN\": \"union-dataplane-system@example-project.iam.gserviceaccount.com\"\n  \"CLUSTER_NAME\": \"union-dataplane\"\n  \"FAST_REGISTRATION_BUCKET\": \"union-dataplane-fast-reg-abcd1234\"\n  \"GCP_REGION\": \"example-region1\"\n  \"GOOGLE_PROJECT_ID\": \"example-project\"\n  \"METADATA_BUCKET\": \"union-dataplane-metadata-abcd1234\"\n  \"WORKER_IAM_ROLE_ARN\": \"union-dataplane-system@example-project.iam.gserviceaccount.com\"\n\"imageBuilder\":\n  \"registryName\": \"union-dataplane\"\n",
+  "kubeconfig_command": "gcloud container clusters get-credentials union-dataplane --region example-region1 --project example-project",
+  "namespace": "union",
+  "node_service_account_email": "union-dataplane-nodes@example-project.iam.gserviceaccount.com",
+  "project_id": "example-project",
+  "region": "example-region1",
+  "service_account_email": "union-dataplane-system@example-project.iam.gserviceaccount.com"
+}
